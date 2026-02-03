@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background: black;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide.active {
+  display: block;
+  animation: fade 1.5s;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 20px;
+  font-size: 24px;
+  text-align: center;
+  max-width: 80%;
+}
+
+.final {
+  color: white;
+  font-size: 36px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
